@@ -8,7 +8,7 @@ import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sherpa/ModelFilePath.dart';
 import 'package:sherpa/lib.dart';
-import 'package:system_info_plus/system_info_plus.dart';
+// import 'package:system_info_plus/system_info_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void main() {
@@ -264,22 +264,22 @@ class _MyHomePageState extends State<MyHomePage> {
   void getRam() async {
     try {
       if (Platform.isWindows == false) {
-        int? deviceMemory = await SystemInfoPlus.physicalMemory;
-        int deviceMemoryGB = (deviceMemory ?? 0) ~/ 1024 + 1;
-
-        setState(() {
-          _ram = "${deviceMemoryGB}GB";
-          if (deviceMemoryGB <= 6) {
-            _ram += " (WARNING ! May not be enough)";
-          } else {
-            _ram += " (Should be enough)";
-          }
-          color = deviceMemoryGB > 6
-              ? Colors.green
-              : deviceMemoryGB > 4
-                  ? Colors.orange
-                  : Colors.red;
-        });
+        // int? deviceMemory = await SystemInfoPlus.physicalMemory;
+        // int deviceMemoryGB = (deviceMemory ?? 0) ~/ 1024 + 1;
+        //
+        // setState(() {
+        //   _ram = "${deviceMemoryGB}GB";
+        //   if (deviceMemoryGB <= 6) {
+        //     _ram += " (WARNING ! May not be enough)";
+        //   } else {
+        //     _ram += " (Should be enough)";
+        //   }
+        //   color = deviceMemoryGB > 6
+        //       ? Colors.green
+        //       : deviceMemoryGB > 4
+        //           ? Colors.orange
+        //           : Colors.red;
+        // });
       } else {
         setState(() {
           _ram = " Can't get RAM on Windows";
