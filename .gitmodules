@@ -1,3 +1,7 @@
+# [submodule "src/llama.cpp"]
+# 	path = src/llama.cpp
+# 	url = git@github.com:Bip-Rep/llama.cpp.git
+
 [submodule "src/llama.cpp"]
 	path = src/llama.cpp
-	url = git@github.com:Bip-Rep/llama.cpp.git
+	url = git@github.com:ggerganov/llama.cpp.git
